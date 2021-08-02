@@ -47,12 +47,9 @@ export function initRouter(container:Element){
         }
         //console.log("soy el router");
     }
-    if(location.pathname == "/"){
-        goTo("/welcome")
-    }else{
-        Router(location.pathname);
+    if (location.pathname == "/dwf-m5-parcel-server/") {
+        goTo("/welcome");
+    } else {
+        Router(location.pathname.replace("/dwf-m5-parcel-server", ""));
     }
-    window.onpopstate = function(event) {
-        Router(location.pathname);
-    };
 }
